@@ -1,12 +1,11 @@
 import iziToast from "izitoast";
-// Ek stillerin ek olarak içe aktarılması
 import "izitoast/dist/css/iziToast.min.css";
 const form=document.querySelector('form');
 form.addEventListener('submit',function(event){
-    event.preventDefault(); // Formun varsayılan gönderimini engelle
-    const formData = new FormData(form); // Form verilerini al
-    const delay=Number(formData.get('delay')); // Gecikme süresini al
-    const state=formData.get('state'); // Durum bilgisini al
+    event.preventDefault(); 
+    const formData = new FormData(form); 
+    const delay=Number(formData.get('delay')); 
+    const state=formData.get('state');
 
     const promise = new Promise((resolve, reject) => {
         setTimeout(() => {
